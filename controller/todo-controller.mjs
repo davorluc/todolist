@@ -24,6 +24,7 @@ export class TodoController {
             dueDate: req.body.dueDate,
             importance: req.body.importance,
             description: req.body.description,
+            creationDate: new Date(),
             done: req.body.done === 'on'
         }
 

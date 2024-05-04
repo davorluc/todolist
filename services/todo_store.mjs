@@ -36,13 +36,7 @@ export class TodoStore{
     }
 
     async update(id, updatedTodo) {
-        return await this.db.update({_id: id} , {$set: updatedTodo}, (err, numReplaced) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log(numReplaced);
-            }
-        });
+        return await this.db.update({_id: id} , {$set: updatedTodo});
     }
 
 }
