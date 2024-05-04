@@ -1,5 +1,11 @@
-{"dueDate":"2027-03-04","todoName":"second","importance":"2","description":"aösdoifj","orderDate":{"$$date":1714830710129},"done":false,"_id":"49NXSap4Bmp8rFKu"}
-{"dueDate":"2024-05-03","todoName":"testing done","importance":"4","description":"tetsing tdonw done","orderDate":{"$$date":1714830605980},"done":true,"_id":"GalMxoSYzKK48BPt"}
-{"dueDate":"2026-02-03","todoName":"solala","importance":"3","description":"dingsbums","orderDate":{"$$date":1714830723143},"done":false,"_id":"GkZKL0Fplg0Z1VVs"}
-{"dueDate":"2026-04-03","todoName":"to be happy","importance":"5","description":"please please please please","orderDate":{"$$date":1714830743334},"done":false,"_id":"H6YnSZ1WBEWjOXAW"}
-{"dueDate":"2026-04-03","todoName":"testing","importance":"3","description":"dfasfeadsf","orderDate":{"$$date":1714833787996},"done":false,"_id":"YzpDuJ9x7DtcjNGs"}
+{"dueDate":"2024-01-01","todoName":"Prepare Budget Report","importance":"3","description":"Compile and review the budget report for the previous quarter.","creationDate":{"$$date":1714845428445},"done":false,"_id":"1"}
+{"dueDate":"2024-02-01","todoName":"Tax Preparation","importance":"5","description":"Gather all financial documents and prepare taxes for the year.","creationDate":{"$$date":1714845428445},"done":false,"_id":"10"}
+{"dueDate":"2024-01-05","todoName":"Grocery Shopping","importance":"2","description":"Buy groceries for the week, including fruits and vegetables.","creationDate":{"$$date":1714845428445},"done":false,"_id":"2"}
+{"dueDate":"2024-01-07","todoName":"Dentist Appointment","importance":"4","description":"Visit the dentist for a regular check-up and cleaning.","creationDate":{"$$date":1714845428445},"done":false,"_id":"3"}
+{"dueDate":"2024-01-10","todoName":"Project Presentation","importance":"5","description":"Prepare and deliver the presentation for the project update meeting.","creationDate":{"$$date":1714845428445},"done":false,"_id":"4"}
+{"dueDate":"2024-01-15","todoName":"Car Maintenance","importance":"3","description":"Take the car to the mechanic for a scheduled maintenance check.","creationDate":{"$$date":1714845428445},"done":false,"_id":"5"}
+{"dueDate":"2024-01-18","todoName":"Family Dinner","importance":"2","description":"Organize a family dinner at home and cook a special meal.","creationDate":{"$$date":1714845428445},"done":false,"_id":"6"}
+{"dueDate":"2024-01-20","todoName":"Client Meeting","importance":"5","description":"Meet with the client to discuss project progress and next steps.","creationDate":{"$$date":1714845428445},"done":false,"_id":"7"}
+{"dueDate":"2024-01-25","todoName":"Visit the Gym","importance":"1","description":"Maintain a healthy lifestyle by visiting the gym for a workout session.","creationDate":{"$$date":1714845428445},"done":false,"_id":"8"}
+{"dueDate":"2024-01-30","todoName":"Annual Performance Review","importance":"4","description":"Conduct the annual performance review with team members.","creationDate":{"$$date":1714845428445},"done":false,"_id":"9"}
+{"dueDate":"2024-02-01","todoName":"Tax Preparation","importance":"5","description":"Gather all financial documents and prepare taxes for the year.","creationDate":{"$$date":1714845428445},"done":false,"_id":"10"}

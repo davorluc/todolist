@@ -14,11 +14,25 @@ export class TodoController {
         res.render("todocreated", await todoStore.add(req.body.title, req.body.dueDate, req.body.importance, req.body.description, doneBoolean));
     };
 
-    showTask = async(req, res) => {
-        res.render("edittodo", await todoStore.get(req.params.id));
+    showTodo = async(req, res) => {
+        res.render("todoupdate", await todoStore.get(req.params.id));
     };
 
-    deleteTask = async (req, res) => {
+    updateTodo = async(req, res) => {
+        const updatedTodo = {
+            todoName: req.body.todoName,
+            dueDate: req.body.dueDate,
+            importance: req.body.importance,
+            description: req.body.description,
+            done: req.body.done === 'on'
+        }
+
+        await todoStore.update(req.params.id, updatedTodo);
+
+        res.render("todoupdated")
+    }
+
+    deleteTodo = async (req, res) => {
         res.render("showTodo", await todoStore.delete(req.params.id));
     };
 }

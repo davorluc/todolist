@@ -1,6 +1,6 @@
-<form action="/todo/{{this._id}}" method="post">
+<form action="/todo/update/{{this._id}}" method="post">
     <label>Title</label>
-    <input name="title" type="text" value="{{this.todoName}}">
+    <input name="todoName" type="text" value="{{this.todoName}}">
 
     <label>Importance</label>
     <input name="importance" type="number" min=1 max=5 value="{{this.importance}}">

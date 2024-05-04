@@ -6,7 +6,7 @@ export class Todo{
         this.todoName= todoName;
         this.importance = importance;
         this.description = description;
-        this.orderDate = new Date();
+        this.creationDate = new Date();
         this.done = done;
     }
 }
@@ -34,6 +34,17 @@ export class TodoStore{
     async all() {
         return this.db.find({});
     }
+
+    async update(id, updatedTodo) {
+        return await this.db.update({_id: id} , {$set: updatedTodo}, (err, numReplaced) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(numReplaced);
+            }
+        });
+    }
+
 }
 
 export const todoStore = new TodoStore();
