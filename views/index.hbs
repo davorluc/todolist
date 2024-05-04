@@ -1,0 +1,29 @@
+<h1>Todo App</h1>
+
+<form action='/todos' method='get'><input type='submit' value='create a todo'></form>
+<p>lower buttons do not work yet, just placeholders</p>
+<button>Due Date</button>
+<button>Title</button>
+<button>Importance</button>
+<section>
+    <table>
+        <thead>
+            <tr>
+                <th>Due Date</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Importance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{this.dueDate}}</td>
+                <td>{{this.todoName}}</td>
+                <td>{{this.description}}</td>
+                <td>{{this.importance}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</section>
