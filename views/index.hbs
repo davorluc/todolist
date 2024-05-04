@@ -13,6 +13,7 @@
                 <th>Title</th>
                 <th>Description</th>
                 <th>Importance</th>
+                <th>Done</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,7 @@
                 <td>{{this.todoName}}</td>
                 <td>{{this.description}}</td>
                 <td>{{this.importance}}</td>
+                <td><input type="checkbox" {{#if this.done}}checked{{/if}}></td>
             </tr>
             {{/each}}
         </tbody>

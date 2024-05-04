@@ -10,11 +10,12 @@ export class TodoController {
     };
 
     createTask = async (req,res) => {
-        res.render("todocreated", await todoStore.add(req.body.title, req.body.dueDate, req.body.importance, req.body.description));
+        const doneBoolean = req.body.done === 'on'
+        res.render("todocreated", await todoStore.add(req.body.title, req.body.dueDate, req.body.importance, req.body.description, doneBoolean));
     };
 
     showTask = async(req, res) => {
-        res.render("showTodo", await todoStore.get(req.params.id));
+        res.render("edittodo", await todoStore.get(req.params.id));
     };
 
     deleteTask = async (req, res) => {
