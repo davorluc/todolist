@@ -9,7 +9,7 @@ export class TodoController {
         res.render("todocreation");
     };
 
-    createTask = async (req,res) => {
+    createdTodo = async (req,res) => {
         const doneBoolean = req.body.done === 'on'
         res.render("todocreated", await todoStore.add(req.body.title, req.body.dueDate, req.body.importance, req.body.description, doneBoolean));
     };

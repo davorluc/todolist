@@ -1,18 +1,19 @@
-<form action="/todos" method="post">
+<form action="/todo/{{this._id}}" method="post">
     <label>Title</label>
-    <input name="title" type="text">
+    <input name="title" type="text" value="{{this.todoName}}">
 
     <label>Importance</label>
-    <input name="importance" type="number" min=1 max=5>
+    <input name="importance" type="number" min=1 max=5 value="{{this.importance}}">
 
     <label>Due Date</label>
-    <input name="dueDate" type="date">
+    <input name="dueDate" type="date" value="{{this.dueDate}}">
 
     <label>Description</label>
-    <input name="description" type="text">
+    <input name="description" type="text" value="{{this.description}}">
 
     <label>Done</label>
-    <input name="done" type="checkbox">
+    <input name="done" type="checkbox" {{#if this.done}}checked{{/if}}>
 
-    <input name="submission" type="submit">
+    <input name="submission" type="submit" value="Update">
+    
 </form>

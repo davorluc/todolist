@@ -24,6 +24,7 @@
                 <td>{{this.description}}</td>
                 <td>{{this.importance}}</td>
                 <td><input type="checkbox" {{#if this.done}}checked{{/if}}></td>
+                 <td><form action='/todo/{{this._id}}' method='get'><input type='submit' value='Edit'></form></td>
             </tr>
             {{/each}}
         </tbody>
