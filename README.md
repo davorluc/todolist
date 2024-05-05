@@ -6,7 +6,6 @@
     - Importance
     - Creation Date
     - Name
-3. Delete Function
-4. Style Toggle
-5. Umbau Typescript
-6. Styling
+3. Style Toggle
+4. Umbau Typescript
+5. Styling

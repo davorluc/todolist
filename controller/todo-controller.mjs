@@ -40,7 +40,9 @@ export class TodoController {
     }
 
     deleteTodo = async (req, res) => {
-        res.render("showTodo", await todoStore.delete(req.params.id));
+        
+        await todoStore.delete(req.params.id)
+        res.redirect('/');
     };
 }
 

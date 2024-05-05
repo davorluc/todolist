@@ -29,6 +29,11 @@
                     </form>
                 </td>
                 <td><form action='/todo/{{this._id}}' method='get'><input type='submit' value='Edit'></form></td>
+                <td>
+                    <form action='/todo/{{this._id}}/deleted' method="post">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
             </tr>
             {{/each}}
         </tbody>
