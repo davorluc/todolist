@@ -9,5 +9,6 @@ router.get('/todos', todoController.createTodo);
 router.get('/todo/:id', todoController.showTodo);
 router.post('/todos', todoController.createdTodo);
 router.post('/todo/update/:id', todoController.updateTodo);
+router.post('/todo/:id/done', todoController.updateDone);
 
 export const indexRoutes = router;

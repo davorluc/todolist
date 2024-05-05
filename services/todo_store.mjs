@@ -39,6 +39,10 @@ export class TodoStore{
         return await this.db.update({_id: id} , {$set: updatedTodo});
     }
 
+    async updateDone(id, doneStatus) {
+        return await this.db.update({_id: id}, {$set: {done: doneStatus}});
+    }
+
 }
 
 export const todoStore = new TodoStore();

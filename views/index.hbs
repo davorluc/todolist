@@ -23,8 +23,12 @@
                 <td>{{this.todoName}}</td>
                 <td>{{this.description}}</td>
                 <td>{{this.importance}}</td>
-                <td><input type="checkbox" {{#if this.done}}checked{{/if}}></td>
-                 <td><form action='/todo/{{this._id}}' method='get'><input type='submit' value='Edit'></form></td>
+                <td>
+                    <form action="/todo/{{this._id}}/done" method="post">
+                        <input type="checkbox" onchange="this.form.submit()" name="done" {{#if this.done}}checked{{/if}}>
+                    </form>
+                </td>
+                <td><form action='/todo/{{this._id}}' method='get'><input type='submit' value='Edit'></form></td>
             </tr>
             {{/each}}
         </tbody>

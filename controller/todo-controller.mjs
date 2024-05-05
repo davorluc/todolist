@@ -33,6 +33,12 @@ export class TodoController {
         res.render("todoupdated")
     }
 
+    updateDone = async(req, res) => {
+        
+        await todoStore.updateDone(req.params.id, req.body.done === 'on');
+        res.redirect('/');
+    }
+
     deleteTodo = async (req, res) => {
         res.render("showTodo", await todoStore.delete(req.params.id));
     };
