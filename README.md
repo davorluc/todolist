@@ -10,4 +10,3 @@
 4. Style Toggle
 5. Umbau Typescript
 6. Styling
-7. Check off tasks in index view
