@@ -1,16 +1,11 @@
 export const sessionUserSettings = (req, res, next) => {
-    const userSettings = req.session?.userSettings || {orderBy: 'title', orderDirection: -1, theme: 'dark'};
-    const {orderBy, orderDirection, theme} = req.query;
+    const userSettings = req.session?.userSettings || {orderBy: 'title', orderDirection: -1, showCompleted: true};
+    const {orderBy, orderDirection, hideCompleted} = req.query;
 
-    if (theme) {
-        userSettings.theme = theme;
-    }
-    if (orderBy) {
-        userSettings.orderBy = orderBy;
-    }
-    if (orderDirection) {
-        userSettings.orderDirection = orderDirection;
-    }
+    orderBy && (userSettings.orderBy = orderBy);
+    orderDirection && (userSettings.orderDirection = orderDirection * -1);
+    hideCompleted !== undefined && (userSettings.showCompleted = !userSettings.showCompleted);
+
     req.userSettings = req.session.userSettings = userSettings;
     res.locals = req.userSettings; // visible within views
 

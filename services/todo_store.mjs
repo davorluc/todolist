@@ -30,8 +30,9 @@ export class TodoStore{
         return this.db.findOne({_id: id});
     }
 
-    async all() {
-        return this.db.find({});
+    async all(showCompleted) {
+        const query = showCompleted ? {} : {done: false};
+        return this.db.find(query);
     }
 
     async update(id, updatedTodo) {

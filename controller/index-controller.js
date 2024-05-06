@@ -2,7 +2,7 @@ import { todoStore } from "../services/todo_store.mjs";
 
 export class IndexController {
     async index(req, res) {
-        const data = await todoStore.all();
+        const data = await todoStore.all(req.userSettings.showCompleted);
         res.render("index", {data: data});
     };
 }

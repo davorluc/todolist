@@ -5,6 +5,10 @@
 <button>Due Date</button>
 <button>Title</button>
 <button>Importance</button>
+<form action="/" method="get">
+    <input type="hidden" name="hideCompleted" value={{userSettings.showCompleted}}>
+    <input type="submit" value="Toggle Show Completed">
+</form>
 <section>
     <table>
         <thead>
