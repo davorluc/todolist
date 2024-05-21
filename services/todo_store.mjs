@@ -30,9 +30,9 @@ export class TodoStore{
         return this.db.findOne({_id: id});
     }
 
-    async all(showCompleted) {
+    async all(showCompleted, orderBy, orderDirection) {
         const query = showCompleted ? {} : {done: false};
-        return this.db.find(query);
+        return this.db.find(query).sort({[orderBy]: orderDirection});
     }
 
     async update(id, updatedTodo) {

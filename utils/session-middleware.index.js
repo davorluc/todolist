@@ -1,5 +1,5 @@
 export const sessionUserSettings = (req, res, next) => {
-    const userSettings = req.session?.userSettings || {orderBy: 'title', orderDirection: -1, showCompleted: true};
+    const userSettings = req.session?.userSettings || {orderBy: 'todoName', orderDirection: -1, showCompleted: true};
     const {orderBy, orderDirection, hideCompleted} = req.query;
 
     orderBy && (userSettings.orderBy = orderBy);

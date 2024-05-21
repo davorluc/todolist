@@ -1,13 +1,31 @@
 <h1>Todo App</h1>
 
 <form action='/todos' method='get'><input type='submit' value='create a todo'></form>
-<p>lower buttons do not work yet, just placeholders</p>
-<button>Due Date</button>
-<button>Title</button>
-<button>Importance</button>
 <form action="/" method="get">
     <input type="hidden" name="hideCompleted" value={{userSettings.showCompleted}}>
     <input type="submit" value="Toggle Show Completed">
+</form>
+<form action="/" method="get">
+    <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
+    <input type="hidden" name="orderBy" value="todoName">
+    <input type="submit" value="Name">
+</form>
+
+<form action="/" method="get">
+    <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
+    <input type="hidden" name="orderBy" value="dueDate">
+    <input type="submit" value="By Due Date"> 
+</form>
+
+<form action="/" method="get">
+    <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
+    <input type="hidden" name="orderBy" value="importance">
+    <input type="submit" value="By Importance">
+</form>
+<form action="/" method="get">
+    <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection -1}}-1{{else}}1{{/if_eq}}>
+    <input type="hidden" name="orderBy" value="creationDate">
+    <input type="submit" value="By Newest">
 </form>
 <section>
     <table>
