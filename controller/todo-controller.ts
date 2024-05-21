@@ -1,24 +1,25 @@
-import { todoStore } from "../services/todo_store.mjs";
+import { todoStore } from "../services/todo_store";
+import { Response } from "express";
 
 export class TodoController {
-    showIndex = (req, res) => {
+    showIndex = (req: any, res: Response) => {
         res.render("index");
     };
 
-    createTodo = (req, res) => {
+    createTodo = (req: any, res: Response) => {
         res.render("todocreation");
     };
 
-    createdTodo = async (req,res) => {
+    createdTodo = async (req: any, res: Response) => {
         const doneBoolean = req.body.done === 'on'
         res.render("todocreated", await todoStore.add(req.body.title, req.body.dueDate, req.body.importance, req.body.description, doneBoolean));
     };
 
-    showTodo = async(req, res) => {
+    showTodo = async(req: any, res: Response) => {
         res.render("todoupdate", await todoStore.get(req.params.id));
     };
 
-    updateTodo = async(req, res) => {
+    updateTodo = async(req: any, res: Response) => {
         const updatedTodo = {
             todoName: req.body.todoName,
             dueDate: req.body.dueDate,
@@ -33,13 +34,13 @@ export class TodoController {
         res.render("todoupdated")
     }
 
-    updateDone = async(req, res) => {
+    updateDone = async(req: any, res: Response) => {
         
         await todoStore.updateDone(req.params.id, req.body.done === 'on');
         res.redirect('/');
     }
 
-    deleteTodo = async (req, res) => {
+    deleteTodo = async (req: any, res: Response) => {
         
         await todoStore.delete(req.params.id)
         res.redirect('/');
