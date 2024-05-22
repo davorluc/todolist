@@ -6,6 +6,10 @@
     <input type="submit" value="Toggle Show Completed">
 </form>
 <form action="/" method="get">
+    <input type="hidden" name="styleToggle" value={{userSettings.styleToggle}}>
+    <input type="submit" value="Toggle Style">
+</form>
+<form action="/" method="get">
     <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
     <input type="hidden" name="orderBy" value="todoName">
     <input type="submit" value="Name">
@@ -60,4 +64,7 @@
             {{/each}}
         </tbody>
     </table>
+    {{#unless data}}
+    <p>No entries found</p>
+    {{/unless}}
 </section>

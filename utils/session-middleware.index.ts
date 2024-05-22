@@ -11,6 +11,7 @@ export const sessionUserSettings = (req: any, res: Response, next: (err?: any) =
     styleToggle !== undefined && (userSettings.styleToggle = !userSettings.styleToggle);
 
 
+    res.locals.userSettings = userSettings;
     req.userSettings = req.session.userSettings = userSettings;
     next();
 };

@@ -1,0 +1,8 @@
+body {
+    background: var(--body-bg);
+    color: var(--body-color);
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+}
