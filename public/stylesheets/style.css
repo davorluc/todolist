@@ -6,3 +6,67 @@ body {
     text-align: center;
     font-family: "JetBrains Mono", monospace;
 }
+
+/* Heading */
+h1 {
+    font-family: inherit;
+}
+
+/* Filter buttons alignment */
+#filters{
+    display: flex;
+    justify-content: center;
+}
+
+.filter{
+    margin: 1vw;
+}
+
+/* Filter Buttons styling on Index page */
+.action-button {
+  background-color: #ECB176;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #6F4E37;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: inherit;
+}
+
+.action-button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.small-action-button {
+  background-color: #ECB176;
+  border: 2px solid #422800;
+  border-radius: 10px;
+  box-shadow: #422800 1.5px 1.5px 0 0;
+  color: #6F4E37;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: inherit;
+}
+
+.small-action-button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
