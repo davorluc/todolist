@@ -1,37 +1,39 @@
 <h1>Todo App</h1>
 
-<form action='/todos' method='get'><input type='submit' value='create a todo'></form>
-<form action="/" method="get">
-    <input type="hidden" name="hideCompleted" value={{userSettings.showCompleted}}>
-    <input type="submit" value="Toggle Show Completed">
-</form>
-<form action="/" method="get">
-    <input type="hidden" name="styleToggle" value={{userSettings.styleToggle}}>
-    <input type="submit" value="Toggle Style">
-</form>
-<form action="/" method="get">
-    <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
-    <input type="hidden" name="orderBy" value="todoName">
-    <input type="submit" value="Name">
-</form>
+<form action='/todos' method='get'><input type='submit' value='create a todo' class="action-button"></form>
+<section id="filters">
+    <form action="/" method="get" class="filter">
+        <input type="hidden" name="hideCompleted" value={{userSettings.showCompleted}}>
+        <input type="submit" value="Toggle Show Completed" class="action-button">
+    </form>
+    <form action="/" method="get" class="filter">
+        <input type="hidden" name="styleToggle" value={{userSettings.styleToggle}}>
+        <input type="submit" value="Toggle Style" class="action-button">
+    </form>
+    <form action="/" method="get" class="filter">
+        <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
+        <input type="hidden" name="orderBy" value="todoName">
+        <input type="submit" value="Name" class="action-button">
+    </form>
 
-<form action="/" method="get">
-    <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
-    <input type="hidden" name="orderBy" value="dueDate">
-    <input type="submit" value="By Due Date"> 
-</form>
+    <form action="/" method="get" class="filter">
+        <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
+        <input type="hidden" name="orderBy" value="dueDate">
+        <input type="submit" value="By Due Date" class="action-button"> 
+    </form>
 
-<form action="/" method="get">
-    <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
-    <input type="hidden" name="orderBy" value="importance">
-    <input type="submit" value="By Importance">
-</form>
-<form action="/" method="get">
-    <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection -1}}-1{{else}}1{{/if_eq}}>
-    <input type="hidden" name="orderBy" value="creationDate">
-    <input type="submit" value="By Newest">
-</form>
-<section>
+    <form action="/" method="get" class="filter">
+        <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection 1}}1{{else}}-1{{/if_eq}}>
+        <input type="hidden" name="orderBy" value="importance">
+        <input type="submit" value="By Importance" class="action-button">
+    </form>
+    <form action="/" method="get" class="filter">
+        <input type="hidden" name="orderDirection" value={{#if_eq userSettings.orderDirection -1}}-1{{else}}1{{/if_eq}}>
+        <input type="hidden" name="orderBy" value="creationDate">
+        <input type="submit" value="By Newest" class="action-button">
+    </form>
+</section>
+<section id="todo-list-overview">
     <table>
         <thead>
             <tr>
@@ -54,10 +56,10 @@
                         <input type="checkbox" onchange="this.form.submit()" name="done" {{#if this.done}}checked{{/if}}>
                     </form>
                 </td>
-                <td><form action='/todo/{{this._id}}' method='get'><input type='submit' value='Edit'></form></td>
+                <td><form action='/todo/{{this._id}}' method='get'><input type='submit' value='Edit' class="small-action-button"></form></td>
                 <td>
                     <form action='/todo/{{this._id}}/deleted' method="post">
-                        <input type="submit" value="Delete">
+                        <input type="submit" value="Delete" class="small-action-button">
                     </form>
                 </td>
             </tr>
