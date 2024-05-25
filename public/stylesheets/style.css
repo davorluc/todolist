@@ -70,3 +70,40 @@ h1 {
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
+
+/* Index Table styling */
+table {
+  margin: 0 auto;
+}
+
+th {
+  background-color: #ECB176;
+  color: #6F4E37;
+  font-weight: bold;
+  padding: 10px;
+}
+
+td {
+  background-color: #F4E8D0;
+  color: #6F4E37;
+  padding: 10px;
+}
+
+/* Form styling */
+#todo-creation {
+  margin-top:10vh;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.text-input {
+  font-family: inherit;
+  background-color: #F4E8D0;
+  color: inherit;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+#form-description {
+  min-height: 10vh;
+}

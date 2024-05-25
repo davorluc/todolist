@@ -1,18 +1,19 @@
-<form action="/todos" method="post">
+<form action="/todos" method="post" id="todo-creation">
+    <h1>Create a Todo</h1>
     <label>Title</label>
-    <input name="title" type="text">
+    <input name="title" type="text" class="text-input" id="form-title">
 
     <label>Importance</label>
-    <input name="importance" type="number" min=1 max=5>
+    <input name="importance" type="number" min=1 max=5 class="text-input" id="form-importance">
 
     <label>Due Date</label>
-    <input name="dueDate" type="date">
+    <input name="dueDate" type="date" class="text-input" id="form-due-date">
 
     <label>Description</label>
-    <input name="description" type="text">
+    <input name="description" type="text" class="text-input" id="form-description">
 
     <label>Done</label>
-    <input name="done" type="checkbox">
+    <input name="done" type="checkbox" id="form-done">
 
-    <input name="submission" type="submit">
+    <input name="submission" type="submit" class="small-action-button" id="form-submit" value="Create Todo">
 </form>
