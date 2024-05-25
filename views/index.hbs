@@ -33,41 +33,27 @@
         <input type="submit" value="By Newest" class="action-button">
     </form>
 </section>
-<section id="todo-list-overview">
-    <table>
-        <thead>
-            <tr>
-                <th>Due Date</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Importance</th>
-                <th>Done</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each data}}
-            <tr>
-                <td>{{this.dueDate}}</td>
-                <td>{{this.todoName}}</td>
-                <td>{{this.description}}</td>
-                <td>{{this.importance}}</td>
-                <td>
-                    <form action="/todo/{{this._id}}/done" method="post">
-                        <input type="checkbox" onchange="this.form.submit()" name="done" {{#if this.done}}checked{{/if}}>
-                    </form>
-                </td>
-                <td><form action='/todo/{{this._id}}' method='get'><input type='submit' value='Edit' class="small-action-button"></form></td>
-                <td>
-                    <form action='/todo/{{this._id}}/deleted' method="post">
-                        <input type="submit" value="Delete" class="small-action-button">
-                    </form>
-                </td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
+<section id="todo-list-overview-cards">
+    {{#each data}}
+    <article class="todo-card">
+        <div class="todo-card-content">
+            <p><strong>Due Date:</strong> {{this.dueDate}}</p>
+            <p><strong>Title:</strong> {{this.todoName}}</p>
+            <p><strong>Description:</strong> {{this.description}}</p>
+            <p><strong>Importance:</strong> {{this.importance}}</p>
+            <p>
+                <strong>Done:</strong>
+                <form action="/todo/{{this._id}}/done" method="post">
+                    <input type="checkbox" onchange="this.form.submit()" name="done" {{#if this.done}}checked{{/if}}>
+                </form>
+            </p>
+            <div class="todo-card-actions">
+                <form action='/todo/{{this._id}}' method='get'><input type='submit' value='Edit' class="small-action-button"></form>
+                <form action='/todo/{{this._id}}/deleted' method="post"><input type="submit" value="Delete" class="small-action-button"></form>
+            </div>
+        </div>
+    </article>
+    {{/each}}
     {{#unless data}}
     <p>No entries found</p>
     {{/unless}}

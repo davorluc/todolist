@@ -71,22 +71,21 @@ h1 {
   transform: translate(2px, 2px);
 }
 
-/* Index Table styling */
-table {
-  margin: 0 auto;
+#todo-list-overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-th {
-  background-color: #ECB176;
-  color: #6F4E37;
-  font-weight: bold;
-  padding: 10px;
-}
-
-td {
+#todo-list-overview-cards article {
   background-color: #F4E8D0;
-  color: #6F4E37;
+  border-radius: 10px;
+  margin: 10px;
   padding: 10px;
+  border: 2px solid #6F4E37;
+}
+
+#todo-list-overview-cards article .small-action-button {
+  margin: 5px;
 }
 
 /* Form styling */
@@ -106,4 +105,21 @@ td {
 
 #form-description {
   min-height: 10vh;
+}
+
+@media (max-width: 1200px) 
+{
+    #todo-creation {
+        margin-top: 5vh;
+        display: block;
+    }
+
+    #filters {
+        display: block;
+    }
+
+    table {
+      font-size: small;
+      overflow: scroll;
+    }
 }
