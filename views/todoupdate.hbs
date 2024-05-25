@@ -1,19 +1,19 @@
-<form action="/todo/update/{{this._id}}" method="post">
+<form action="/todo/update/{{this._id}}" method="post" id="todo-creation">
     <label>Title</label>
-    <input name="todoName" type="text" value="{{this.todoName}}">
+    <input name="todoName" type="text" value="{{this.todoName}}" class="text-input">
 
     <label>Importance</label>
-    <input name="importance" type="number" min=1 max=5 value="{{this.importance}}">
+    <input name="importance" type="number" min=1 max=5 value="{{this.importance}}" class="text-input">
 
     <label>Due Date</label>
-    <input name="dueDate" type="date" value="{{this.dueDate}}">
+    <input name="dueDate" type="date" value="{{this.dueDate}}" class="text-input">
 
     <label>Description</label>
-    <input name="description" type="text" value="{{this.description}}">
+    <input name="description" type="text" value="{{this.description}}" class="text-input">
 
     <label>Done</label>
     <input name="done" type="checkbox" {{#if this.done}}checked{{/if}}>
 
-    <input name="submission" type="submit" value="Update">
+    <input name="submission" type="submit" value="Update" class="small-action-button">
     
 </form>

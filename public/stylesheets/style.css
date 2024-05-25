@@ -71,12 +71,13 @@ h1 {
   transform: translate(2px, 2px);
 }
 
+/* todo list overview cards grid */
 #todo-list-overview-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-#todo-list-overview-cards article {
+article {
   background-color: #F4E8D0;
   border-radius: 10px;
   margin: 10px;
@@ -107,6 +108,11 @@ h1 {
   min-height: 10vh;
 }
 
+#todo-created {
+  display: inline-block;
+  margin: 10vh;
+}
+
 @media (max-width: 1200px) 
 {
     #todo-creation {
@@ -116,10 +122,5 @@ h1 {
 
     #filters {
         display: block;
-    }
-
-    table {
-      font-size: small;
-      overflow: scroll;
     }
 }
